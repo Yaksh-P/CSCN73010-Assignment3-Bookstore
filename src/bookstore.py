@@ -7,7 +7,7 @@ CATALOG = {"python": 2500, "algorithms": 4000}
 def quote(title, quantity):
     if title not in CATALOG:
         raise ValueError("Unknown book")
-    if quantity < 0:
+    if quantity <= 0:
         raise ValueError("Quantity must be positive")
     return CATALOG[title] * quantity
 

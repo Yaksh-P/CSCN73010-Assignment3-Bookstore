@@ -14,3 +14,7 @@ class QuoteTests(unittest.TestCase):
     def test_negative_quantity(self):
         with self.assertRaisesRegex(ValueError, "Quantity must be positive"):
             quote("python", -1)
+            
+    def test_zero_quantity(self):
+        with self.assertRaisesRegex(ValueError, "Quantity must be positive"):
+            quote("python", 0)
